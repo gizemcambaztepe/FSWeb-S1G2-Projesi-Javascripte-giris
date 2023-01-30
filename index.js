@@ -19,7 +19,11 @@ Aşağıdakileri yapın:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+let surucuYasi = 20
+if (surucuYasi > 18 ){
+  console.log("true");
+} else { console.log("false");
+}
 
 
 /*
@@ -33,7 +37,11 @@ Aşağıdakileri yapınız:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+let birinciDeger = 10
+let ikinciDegeri = 5
+if (birinciDeger > ikinciDegeri ) {
+  birinciDeger = 15;
+} console.log(birinciDeger); 
 
 
 
@@ -48,7 +56,9 @@ Aşağıdakileri yapın:
 
    İPUCU: Number metoduna bakabilirsin
 */
-
+let deger = "1999"
+deger = Number(deger);
+console.log(deger);
 
 
 
@@ -61,10 +71,10 @@ Aşağıdakileri yapın:
    3. a ve b'yi çarpıp, sonucu dönün
 */
 
-function carpma(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function carpma(a,b){
+  return a*b;
 }
-
+console.log(carpma(4,5));
 
 
 
@@ -77,11 +87,10 @@ Aşağıdakileri yapın:
  3. Hesaplanan köpeğin yaşını dönün.
  */
 
-function kopeginYasi(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
-}
-
-
+function kopeginYasi(kopekAge){
+  const insanAge = kopekAge*7;
+  return insanAge
+} console.log(kopeginYasi(7));
 
 /* Görev 3 */
 
@@ -103,9 +112,20 @@ Aşağıdakileri oyun isimli fonksiyonu kullanarak yapın.
 
 OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı yener | veya beraberlik olur.
 */
+var pcChoice = null
+let randomNum = Math.floor(Math.random()*3) ;
+if ( randomNum == 0 ) {pcChoice = "Taş"}
+else if ( randomNum == 1 ) { pcChoice ="Kağıt"} 
+else { pcChoice = "Makas"}
+console.log(pcChoice);
 
-function oyun(oyuncu, bilgisayar){
-  /*buraya kodunu yazabilirsin*/
+function oyun(oyuncu, bilgisayar){ 
+  if ( oyuncu == bilgisayar) { return "Beraberlik"} 
+  else if (( oyuncu == "Taş" && bilgisayar == "Makas") || 
+  ( oyuncu == "Makas" && bilgisayar == "Kağıt") || 
+  ( oyuncu== "Kağıt" && bilgisayar == "Taş"))
+  {return "Kazandın!"}
+  else {return "Kaybettin!"}
 }
 
 
@@ -120,10 +140,11 @@ Aşağdakileri milDonusturucu fonksiyonunu kullanarak yapın:
 3. Mil değerini geri dönün
 */
 
-function milDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function milDonusturucu(kmDeger){
+  let milDeger = kmDeger* 0.621371 ;
+  return milDeger;
 }
-
+console.log(milDonusturucu(3));
 
 
 //Görev 4b - Santimetreden Feet
@@ -134,10 +155,11 @@ Aşağıdakileri feetDonusturucu fonsiyonunu kullanarak yapın:
 3. feet değerini geri dönün
 */
 
-function feetDonusturucu(/*buraya kodunu yazabilirsin*/){
-  /*buraya kodunu yazabilirsin*/
+function feetDonusturucu(cmDeger){
+  let feetDeger = cmDeger/ 30.48;
+  return feetDeger;
 }
-
+console.log(feetDonusturucu(10));
 
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımızı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
@@ -153,9 +175,11 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yapın:
 4. Bu döngüde, her seferinde cocukSarkisi fonsiyonu çalışsın ve console.log'a dönen metni yazdırsın.
 */
 
-function cocukSarkisi(/*buraya kodunu yazabilirsin*/){
-      /*buraya kodunu yazabilirsin*/
+function cocukSarkisi(monkeyNum){
+   return monkeyNum + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!" ;
 }
+   for ( let i=5; i>0; i--);
+   console.log(cocukSarkisi(1));
 
 
 /* Görev 6 : Not Hesaplayıcı */
@@ -173,9 +197,14 @@ Aşağdakileri notHesapla fonksiyonunda yapın.
  dönün
 */
 
-function notHesapla(/*buraya kodunu yazabilirsin*/){
-/*buraya kodunu yazabilirsin*/
+function notHesapla(quizNote){
+if ( quizNote < 60 ) {console.log ("F aldın")}; 
+if ( 60 <= quizNote && quizNote< 70 ) {console.log ("D aldın")}; 
+if (70 <= quizNote && quizNote <80 ) { console.log ("C aldın")};
+if ( 80 <= quizNote && quizNote<90) {console.log ("B aldın")};
+if ( 90 <= quizNote && quizNote <= 100) {console.log ("A aldın")};
 }
+(notHesapla(90));
 
 
 
@@ -191,8 +220,8 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yapın.
 */
 
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(kelime) {
+  
 }
 
 
@@ -212,5 +241,5 @@ module.exports = {
   milDonusturucu,
   feetDonusturucu,
   cocukSarkisi,
-  notHesapla
+  notHesapla,
 }
